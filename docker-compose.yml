@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  addressable-dwn:
+    build:
+      context: .
+      dockerfile: addressable-dwn/Dockerfile
+    ports:
+      - "5000:5000"
+  chat-app:
+    build:
+      context: .
+      dockerfile: chat-app/Dockerfile
+    ports:
+      - "5275:5275"
+  todo-app:
+    build:
+      context: .
+      dockerfile: todo-app/Dockerfile
+    ports:
+      - "5173:5173"
